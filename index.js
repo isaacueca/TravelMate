@@ -73,7 +73,7 @@ function checkTimeZone() {
       return true;
    }
 }
-
+var myApiUrl = 'http://YOUR_API_URL_GOES_HERE';
 var isOnline = navigator.onLine;
 var tmIcon = 'travelmate-ati.png';
 var tmPss = 'travelmate-ps.png';
@@ -193,7 +193,7 @@ setForexData = function() {
 		myLoadMask.show();
 		if(navigator.onLine){
 			Ext.util.JSONP.request({
-				url: 'http://jag.gr/api/forex/',
+				url: myApiUrl,
 				callbackKey: 'callback',
 				params: {noCache: Math.random()},
 				callback: function(data) {
